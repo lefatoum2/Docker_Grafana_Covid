@@ -7,7 +7,7 @@ docker ps
 docker exec -it data1_db_1 bash
 
 ### Se connecter à la base de données:
-mysql -u user -password
+mysql -u user -ppassword
 
 ### Afficher les bases de données créés : 
 show databases
