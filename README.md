@@ -1,15 +1,15 @@
 # Docker_Grafana_Covid
 
-###Voir tous les conteneurs actifs:
+### Voir tous les conteneurs actifs:
 docker ps
 
-###Travailler sur le conteneur mysql en bash:
+### Travailler sur le conteneur mysql en bash:
 docker exec -it data1_db_1 bash
 
-###Se connecter à la base de donnée:
+### Se connecter à la base de donnée:
 mysql -u user -password
 
-###Afficher les bases de donnée créés : 
+### Afficher les bases de donnée créés : 
 show databases
 
 ### Quelques requêtes:
