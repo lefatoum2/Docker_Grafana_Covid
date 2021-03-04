@@ -28,6 +28,14 @@ Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0
 ## Graphiques
 
 ![5.png](./grafana_docker_brief/Capture_bar.JPG)
+![5.png](./grafana_docker_brief/Capture_bar_2.JPG)
+![5.png](./grafana_docker_brief/Capture_heatmap.JPG)
+![5.png](./grafana_docker_brief/Capture_hundred.JPG)
+![5.png](./grafana_docker_brief/Capture_lines.JPG)
+![5.png](./grafana_docker_brief/Capture_network.JPG)
+![5.png](./grafana_docker_brief/Capture_stats.JPG)
+![5.png](./grafana_docker_brief/Docker_compo.JPG)
+
 
 ### Voir tous les conteneurs actifs:
 docker ps
