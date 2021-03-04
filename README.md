@@ -20,7 +20,7 @@ Inspectez le réseau : docker network inspect mynetwork1
 ## Connection entre MySQL et Grafana
 
 Notez l'adresse Ip des conteneurs ,notamment celui de mysql1 
-
+![5.png](./grafana_docker_brief/Capture_network.JPG)
 Dans notre exemple, l’adresse Ip de mysql1 est 172.24.0.2 et le port est 3306. 
 Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0.2:3306 dans la partie HOST . 
 
@@ -32,9 +32,8 @@ Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0
 ![5.png](./grafana_docker_brief/Capture_heatmap.JPG)
 ![5.png](./grafana_docker_brief/Capture_hundred.JPG)
 ![5.png](./grafana_docker_brief/Capture_lines.JPG)
-![5.png](./grafana_docker_brief/Capture_network.JPG)
 ![5.png](./grafana_docker_brief/Capture_stats.JPG)
-![5.png](./grafana_docker_brief/Docker_compo.JPG)
+
 
 
 ### Voir tous les conteneurs actifs:
