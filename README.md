@@ -2,11 +2,28 @@
 
 ## Création du réseau(network)
 
+Créez un réseau nommé mynetwork1 : docker network create mynetwork1
+
+
+
 ## Création des conteneurs
+
+Créez le container mysql : docker run --net mynetwork1 --name mysql1 -p 3306:3306 -e
+ MYSQL_ROOT_PASSWORD=password -d mysql:5.7 
+
+Créez le container grafana : docker run --net mynetwork1 --name grafana1 -p 3000:3000 grafana/grafana:latest
 
 ## Inspection du réseau
 
+Inspectez le réseau : docker network inspect mynetwork1
+
 ## Connection entre MySQL et Grafana
+
+Notez l'adresse Ip des conteneurs ,notamment celui de mysql1 
+
+Dans notre exemple, l’adresse Ip de mysql1 est 172.24.0.2 et le port est 3306. 
+Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0.2:3306 dans la partie HOST . 
+
 
 ## Graphiques
 
