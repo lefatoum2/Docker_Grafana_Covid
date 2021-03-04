@@ -1,5 +1,15 @@
 # Docker_Grafana_Covid
 
+## Création du réseau(network)
+
+## Création des conteneurs
+
+## Inspection du réseau
+
+## Connection entre MySQL et Grafana
+
+## Graphiques
+
 ### Voir tous les conteneurs actifs:
 docker ps
 
