@@ -27,6 +27,8 @@ Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0
 
 ## Graphiques
 
+![5.png](./grafana_docker_brief/tumblr_n7dceunFcu1teiu7jo1_1280.png)
+
 ### Voir tous les conteneurs actifs:
 docker ps
 
