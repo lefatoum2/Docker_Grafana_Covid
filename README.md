@@ -61,7 +61,7 @@ FROM `db`.`country_vaccinations2`;
 
 ## docker-compose.yml 
 
-<blockquote>
+```
 version: '3.3'
 services:
   db:
@@ -87,7 +87,7 @@ services:
 # Names our volume
 volumes:
   my-db:
-</blockquote>
   
+```
   
   
