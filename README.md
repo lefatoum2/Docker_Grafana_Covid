@@ -17,6 +17,11 @@ Créez le container grafana : docker run --net mynetwork1 --name grafana1 -p 300
 
 Inspectez le réseau : docker network inspect mynetwork1
 
+## Insertion des données par WorkBench
+
+![5.png](./grafana_docker_brief/MySQLWorkbench.png)
+
+
 ## Connection entre MySQL et Grafana
 
 Notez l'adresse Ip des conteneurs ,notamment celui de mysql1 
