@@ -62,31 +62,28 @@ FROM `db`.`country_vaccinations2`;
 ## docker-compose.yml 
 
 ```
-version: '3.3'
+version: "2"
+
 services:
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: 'db'
-      # So you don't have to use root, but you can if you like
-      MYSQL_USER: 'user'
-      # You can use whatever password you like
-      MYSQL_PASSWORD: 'password'
-      # Password for root access
-      MYSQL_ROOT_PASSWORD: 'password'
+  grafana:
+    container_name: grafana1
+    image: grafana/grafana:latest
     ports:
-      # <Port exposed> : < MySQL Port running inside container>
-      - '3306:3306'
-    expose:
-      # Opens port 3306 on the container
-      - '3306'
-      # Where our data will be persisted
+      - 3000:3000
+    user: "root"
+
+
+  mysql:
+    container_name: mysql1
+    image: mysql:5.7
+    ports:
+    - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db1
     volumes:
-      - my-db:/var/lib/mysql
-# Names our volume
-volumes:
-  my-db:
+    - ./db1_country_vaccinations3.sql:/docker-entrypoint-initdb.d/init.sql
+
   
 ```
   
