@@ -99,7 +99,7 @@ services:
 ``` docker-compose up -d```
 
 ## Connection entre grafana et mysql
-
+![5.png](./grafana_docker_brief/Capture_command_docker.JPG)
 
 ## Quelques commandes nécessaires
 
