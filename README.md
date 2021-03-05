@@ -54,8 +54,26 @@ mysql -u user -ppassword
 show databases
 
 ### Quelques requêtes:
-SELECT max(people_vaccinated)
-FROM `db`.`country_vaccinations2`;
+```
+SELECT
+  date AS "time",
+  people_fully_vaccinated,
+  people_vaccinated, daily_vaccinations
+FROM country_vaccinations3
+WHERE
+  $__timeFilter(date) AND
+  country = 'Germany'
+ORDER BY date
+```
+
+```
+SELECT
+  date AS "time",
+  country AS metric,
+  daily_vaccinations
+FROM country_vaccinations3
+ORDER BY date
+```
 
 # Création de la base de données avec Docker-compose et mysql
 
@@ -66,7 +84,7 @@ version: "2"
 
 services:
   grafana:
-    container_name: grafana1
+    container_name: grafana
     image: grafana/grafana:latest
     ports:
       - 3000:3000
@@ -74,7 +92,7 @@ services:
 
 
   mysql:
-    container_name: mysql1
+    container_name: mysql
     image: mysql:5.7
     ports:
     - "3306:3306"
@@ -83,7 +101,6 @@ services:
       MYSQL_DATABASE: db1
     volumes:
     - ./db1_country_vaccinations3.sql:/docker-entrypoint-initdb.d/init.sql
-
   
 ```
   
