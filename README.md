@@ -41,17 +41,6 @@ Lors de l’ajout de la base de données avec Grafana , il faudra noter 172.24.0
 
 
 
-### Voir tous les conteneurs actifs:
-docker ps
-
-### Travailler sur le conteneur mysql en bash:
-docker exec -it data1_db_1 bash
-
-### Se connecter à la base de données:
-mysql -u user -ppassword
-
-### Afficher les bases de données créés : 
-show databases
 
 ### Quelques requêtes:
 ```
@@ -75,7 +64,9 @@ FROM country_vaccinations3
 ORDER BY date
 ```
 
-# Création de la base de données avec Docker-compose et mysql
+# Création de Docker-compose sur le serveur de l'Isen
+
+## Connection au serveur de l'Isen
 
 ## docker-compose.yml 
 
@@ -103,5 +94,23 @@ services:
     - ./db1_country_vaccinations3.sql:/docker-entrypoint-initdb.d/init.sql
   
 ```
-  
-  
+## Création des coneteneurs
+
+``` docker-compose up -d```
+
+## Connection entre grafana et mysql
+
+
+## Quelques commandes nécessaires
+
+### Voir tous les conteneurs actifs et non actifs:
+docker ps -a
+
+### Travailler sur le conteneur mysql en bash:
+docker exec -it data1_db_1 bash
+
+### Se connecter à la base de données:
+mysql -u user -ppassword
+
+### Afficher les bases de données créés : 
+show databases
