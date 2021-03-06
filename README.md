@@ -1,5 +1,7 @@
 # Docker_Grafana_Covid
 
+
+
 ## Création du réseau(network)
 
 Créez un réseau nommé mynetwork1 : docker network create mynetwork1
@@ -94,17 +96,21 @@ services:
     - ./db1_country_vaccinations3.sql:/docker-entrypoint-initdb.d/init.sql
   
 ```
-## Création des coneteneurs
+## Création des conteneurs
 
 ``` docker-compose up -d```
 
 ## Connection entre grafana et mysql
 ![5.png](./grafana_docker_brief/Capture_command_docker.JPG)
 
-## Quelques commandes nécessaires
+## Quelques commandes utiles
 
 ### Voir tous les conteneurs actifs et non actifs:
 docker ps -a
+
+## Supprimer un docker-compose et ses conteneurs:
+
+docker-compose down
 
 ### Travailler sur le conteneur mysql en bash:
 docker exec -it data1_db_1 bash
@@ -112,5 +118,9 @@ docker exec -it data1_db_1 bash
 ### Se connecter à la base de données:
 mysql -u user -ppassword
 
-### Afficher les bases de données créés : 
+### Afficher les bases de données créés (bash) : 
 show databases
+
+### Lien utile pour l'installation de docker et docker-compose sur Ubuntu
+
+https://www.bmc.com/blogs/mongodb-docker-container/
