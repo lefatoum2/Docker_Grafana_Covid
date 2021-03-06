@@ -100,7 +100,7 @@ services:
     - ./db1_country_vaccinations3.sql:/docker-entrypoint-initdb.d/init.sql
   
 ```
-## Création des conteneurs
+## Création des conteneurs avec docker-compose
 
 ``` docker-compose up -d```
 
@@ -127,7 +127,10 @@ show databases
 
 ### Créer un volume pour MySql
 
+```
 docker run --network mysql-net --name mon_mysql -e MYSQL_ROOT_PASSWORD=motdepasse -d mysql:latest --local-infile=1  -v c:/users/utilisateur/desktop/:/var/lib/mysql-files
+
+```
 
 ### Lien utile pour l'installation de docker et docker-compose sur Ubuntu
 
