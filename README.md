@@ -108,7 +108,7 @@ services:
 ### Voir tous les conteneurs actifs et non actifs:
 docker ps -a
 
-## Supprimer un docker-compose et ses conteneurs:
+### Supprimer un docker-compose et ses conteneurs:
 
 docker-compose down
 
