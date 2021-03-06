@@ -70,6 +70,10 @@ ORDER BY date
 
 ## Connection au serveur de l'Isen
 
+```
+# ssh user@10.10.51.155
+
+```
 ## docker-compose.yml 
 
 ```
@@ -120,6 +124,10 @@ mysql -u user -ppassword
 
 ### Afficher les bases de données créés (bash) : 
 show databases
+
+### Créer un volume pour MySql
+
+docker run --network mysql-net --name mon_mysql -e MYSQL_ROOT_PASSWORD=motdepasse -d mysql:latest --local-infile=1  -v c:/users/utilisateur/desktop/:/var/lib/mysql-files
 
 ### Lien utile pour l'installation de docker et docker-compose sur Ubuntu
 
